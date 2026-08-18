@@ -1,0 +1,113 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Overview — She Sells (Brooke) — Australia</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--panel:#f8fafc;--bg:#eef0f3;
+ --accent:#4f46e5;--good:#059669;--warn:#ea580c;--bad:#9f1239}
+@media(prefers-color-scheme:dark){:root{--ink:#e8eaed;--muted:#9aa3b2;--line:#2a3140;
+ --panel:#151a23;--bg:#0d1117;--accent:#818cf8}}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif;
+ -webkit-font-smoothing:antialiased;line-height:1.55}
+h1,h2,h3,h4{font-weight:600;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+header.top{background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.topin{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:26px;height:60px}
+.brand{font-size:15px;font-weight:600;white-space:nowrap}
+.brand span{color:var(--muted);font-weight:400}
+nav.main{display:flex;gap:20px;overflow-x:auto;scrollbar-width:none}
+nav.main::-webkit-scrollbar{display:none}
+nav.main a{font-size:14px;color:var(--muted);text-decoration:none;white-space:nowrap;
+ padding:6px 0;border-bottom:2px solid transparent}
+nav.main a:hover{color:var(--ink)}
+nav.main a.on{color:var(--ink);border-bottom-color:var(--accent)}
+.hero{padding:48px 0 26px}
+.kick{font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.hero h1{font-size:40px;margin-bottom:14px;line-height:1.15}
+.hero p{font-size:17px;color:var(--muted);max-width:820px}
+section{padding:26px 0}
+h2.sec{font-size:22px;margin-bottom:16px;padding-bottom:9px;border-bottom:1px solid var(--line)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.g4{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+.card h3{font-size:15px;margin-bottom:7px}
+.card p{font-size:14px;color:var(--muted)}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+.stat .n{font-size:26px;font-weight:600;letter-spacing:-.03em}
+.stat .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-top:3px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+th,td{text-align:left;padding:9px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:none}
+.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:99px;
+ border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.tag.good{color:var(--good);border-color:var(--good)}
+.tag.warn{color:var(--warn);border-color:var(--warn)}
+.tag.bad{color:var(--bad);border-color:var(--bad)}
+figure{background:var(--panel);border:1px solid var(--line);border-radius:9px;overflow:hidden}
+figure img{width:100%;display:block;background:#000;cursor:zoom-in}
+figcaption{padding:8px 10px;font-size:12px;color:var(--muted);border-top:1px solid var(--line)}
+figcaption b{color:var(--ink);font-weight:600}
+details{background:var(--panel);border:1px solid var(--line);border-radius:9px;margin-bottom:9px}
+summary{padding:12px 15px;cursor:pointer;font-size:14px;font-weight:500;list-style:none;
+ display:flex;justify-content:space-between;gap:14px;align-items:baseline}
+summary::-webkit-details-marker{display:none}
+summary .meta{font-size:12px;color:var(--muted);font-weight:400;white-space:nowrap}
+details .body{padding:0 15px 15px;font-size:14.5px;line-height:1.72;color:var(--ink)}
+details .body p{margin-bottom:12px}
+.ts{color:var(--accent);font-weight:600;font-variant-numeric:tabular-nums;font-size:12.5px}
+.searchbar{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:9px;
+ background:var(--panel);color:var(--ink);font-size:14.5px;margin-bottom:14px;font-family:inherit}
+.note{border-left:3px solid var(--accent);padding:11px 15px;background:var(--panel);
+ border-radius:0 9px 9px 0;font-size:14px;margin-bottom:13px}
+.note.warn{border-left-color:var(--warn)}
+footer{padding:36px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:34px}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.93);display:none;align-items:center;
+ justify-content:center;z-index:99;cursor:zoom-out;padding:20px}
+#lb img{max-width:100%;max-height:92vh;object-fit:contain}
+#lb .cap{position:fixed;bottom:14px;left:0;right:0;text-align:center;color:#cbd5e1;font-size:13px;padding:0 20px}
+</style></head><body>
+<header class="top"><div class="topin">
+<div class="brand">She Sells — fronted by Brooke <span>swipe</span></div>
+<nav class="main"><a href="index.html" class="on">Overview</a><a href="analysis.html" class="">Analysis</a><a href="transcripts.html" class="">VSL transcript</a><a href="videos.html" class="">Video library</a><a href="board.html">Wired board</a></nav></div></header>
+<div class="wrap">
+<div class="hero"><div class="kick">Competitor swipe · captured 1–2 August 2026</div>
+<h1>She Sells (Brooke) — Australia</h1><p><b>NOT Shelby Sapp.</b> A separate Australian business running a quiz &rarr; VSL &rarr; application funnel at the same buyer we sell to: career women who want out of the 9&ndash;5. <b>143 active ads.</b></p></div>
+<section><div class="grid g4"><div class="stat"><div class="n">Australia</div><div class="l">Country</div></div><div class="stat"><div class="n">130931930113119</div><div class="l">FB Page</div></div><div class="stat"><div class="n">143</div><div class="l">Active ads</div></div><div class="stat"><div class="n">4m 27s</div><div class="l">VSL</div></div><div class="stat"><div class="n">Quiz opt-in</div><div class="l">Front</div></div><div class="stat"><div class="n">GoHighLevel</div><div class="l">Platform</div></div><div class="stat"><div class="n">not observed</div><div class="l">Price</div></div><div class="stat"><div class="n">yes</div><div class="l">Registered</div></div></div></section>
+<section><h2 class="sec">The offer</h2><div class="tablewrap"><table><tr><th>Product</th><td>She Sells &mdash; remote/high-ticket sales career for women</td></tr><tr><th>Presenter</th><td><b>Brooke</b>, a former teacher &mdash; the on-camera face is not necessarily the business owner</td></tr><tr><th>Promise</th><td>Quit the 9&ndash;5, double income, work as little as 20 hours a week</td></tr><tr><th>Positioning</th><td>&ldquo;It&rsquo;s not just a program, it&rsquo;s a movement&rdquo;</td></tr><tr><th>Path</th><td>Quiz opt-in (first, last, email, phone) &rarr; 4:27 VSL &rarr; apply</td></tr><tr><th>Also runs</th><td>In-person events &mdash; a Perth live event ad scores 98 (&ldquo;Winning&rdquo;)</td></tr><tr><th>Price</th><td><b>Not observed.</b> Nothing priced in the captured funnel</td></tr></table></div></section>
+<section><h2 class="sec">What matters</h2><div class="grid g2"><div class="card"><h3>Not a Shelby Sapp duplicate &amp;mdash; verified</h3><p>Same name, same ICP, and it nearly got filed as a duplicate on first pass. It is a <b>different company</b>: Shelby is <i>She Sells Remote</i> (shesellsremote.com, US); this is <i>She Sells</i> (shesells.online, Australia), Facebook Page <code>130931930113119</code>, running in-person events in Perth. <b>The Page id is the check.</b></p></div><div class="card"><h3>The lead is emotional cost, not money</h3><p>The page opens on being stuck on a hamster wheel, guilty about not being present for family, chronically exhausted, stressed by bills &mdash; and only then introduces the offer. Income appears later. Worth comparing with how early we put a number in our own copy.</p></div><div class="card"><h3>Teacher-to-freedom is the origin story</h3><p>Brooke frames herself as a former teacher on an average salary with someone else controlling her time. For a UK/AU/US audience of career women, teacher is among the most recognisable versions of &ldquo;respectable but trapped&rdquo;.</p></div><div class="card"><h3>The MLM objection is named in the ad, not the funnel</h3><p>Their ad copy says outright <i>&ldquo;no MLM nonsense to sign up to&rdquo;</i> and &ldquo;no degree needed&rdquo;. They spend paid impressions killing the objection <b>before</b> the click, rather than handling it on the page.</p></div><div class="card"><h3>Quiz first, VSL second, application third</h3><p>The quiz is a low-friction opt-in that also qualifies. Our funnel asks for the commitment earlier. A quiz collects the same contact details while feeling like the prospect is learning something about themselves.</p></div></div></section>
+<section><h2 class="sec">Funnel path</h2><div class="tablewrap"><table>
+<tr><th>#</th><th>Step</th><th>URL</th><th>Note</th></tr><tr><td><b>1</b></td><td>Quiz opt-in</td><td><code>shesells.online/take-quiz463039</code></td><td>First, last, email, phone on GoHighLevel. Registered.</td></tr><tr><td><b>2</b></td><td>VSL</td><td><code>shesells.online/launch-your-salescareer434568</code></td><td>4:27 Wistia VSL fronted by Brooke, then <b>CLICK HERE TO APPLY</b>.</td></tr><tr><td><b>3</b></td><td>In-person events</td><td><code>shesells.online/perth-live-and-in-person-2026</code></td><td>Live events in Perth, sold through a separate winning ad.</td></tr></table></div></section>
+<footer>Captured 1–2 August 2026. Evidence in <code>~/UNDERGROUND_FUNNELS_SSOT</code>
+and <code>~/Downloads/Swipes/SHE_SELLS_BROOKE_Swipe</code>. Built with the <code>/swipe</code> skill.<br>
+Competitor research. Not for redistribution.</footer></div>
+<div id="lb"><img alt=""><div class="cap"></div></div>
+<script>
+document.addEventListener('click',function(e){
+  if(e.target.tagName==='IMG'&&e.target.closest('figure')){
+    var lb=document.getElementById('lb');
+    lb.querySelector('img').src=e.target.dataset.full||e.target.src;
+    var fc=e.target.closest('figure').querySelector('figcaption');
+    lb.querySelector('.cap').textContent=fc?fc.textContent.trim():'';
+    lb.style.display='flex';
+  } else if(e.target.closest('#lb')){document.getElementById('lb').style.display='none';}
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape')document.getElementById('lb').style.display='none';
+});
+function wireSearch(id,sel){
+  var b=document.getElementById(id); if(!b)return;
+  b.addEventListener('input',function(){
+    var q=b.value.toLowerCase();
+    document.querySelectorAll(sel).forEach(function(el){
+      el.style.display = !q || el.textContent.toLowerCase().indexOf(q)>-1 ? '' : 'none';
+    });
+  });
+}
+wireSearch('tsearch','details.tr');
+wireSearch('ssearch','figure.sl');
+</script></body></html>
